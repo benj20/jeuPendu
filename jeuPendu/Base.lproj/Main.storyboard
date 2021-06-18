@@ -1,25 +1,450 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="jeuPendu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le Pendu" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p4-U0-qKf">
+                                <rect key="frame" x="220" y="44" width="153" height="47"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjr-st-SAm">
+                                <rect key="frame" x="141" y="793" width="132" height="37"/>
+                                <color key="backgroundColor" name="Button gray"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="7" maxX="15" maxY="8"/>
+                                <state key="normal" title="Recomencer">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restart:" destination="vXZ-lx-hvc" eventType="touchDown" id="2hD-so-tkv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Le mot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxn-Ho-6cx">
+                                <rect key="frame" x="87" y="461" width="240" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VHM-uT-qHp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="xxR-v0-Uej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-9I-q5w">
+                                <rect key="frame" x="39" y="623" width="336" height="134"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Dv-5h-6gJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9C-Oc-ngU">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="BFz-Ze-AFq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-tj-42R">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Z">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="tq9-PC-Jp8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6Y-bj-6tz">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="szI-pW-9xP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOT-rO-GJ1">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="vXv-BS-4wT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCd-Ft-F46">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="hMn-S9-dLL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km4-Pn-SNK">
+                                                <rect key="frame" x="170" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Y">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="s6i-Kd-gs3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-BE-sSR">
+                                                <rect key="frame" x="204" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="U">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="3ba-bP-Nsx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exY-rk-oSZ">
+                                                <rect key="frame" x="238" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="2QV-pD-9W8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1p-i4-uIx">
+                                                <rect key="frame" x="272" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="3Jn-Yi-FH2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRP-c0-KBr">
+                                                <rect key="frame" x="306" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="qxo-Gc-S1V"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2Bf-7X-Ygr">
+                                        <rect key="frame" x="0.0" y="49" width="336" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAm-Qz-4vP">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="I2Q-U5-KhP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYI-fw-BIZ">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="BUK-U1-fCO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Qx-IAt">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="WgU-II-rab"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-6q-drL">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="g7d-6H-8AZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObL-h7-Net">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="eei-1Z-gtO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9Z-H1-cki">
+                                                <rect key="frame" x="170" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="nb4-zO-3lM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHJ-7G-iDL">
+                                                <rect key="frame" x="204" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="XCi-je-dda"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ9-Ag-QBL">
+                                                <rect key="frame" x="238" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="61h-Cy-7Bu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiZ-gq-vYc">
+                                                <rect key="frame" x="272" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="IYr-nc-DWd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CV1-ra-l1L">
+                                                <rect key="frame" x="306" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="jj5-Nw-lPi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lSj-XF-7m3">
+                                        <rect key="frame" x="68" y="98" width="200" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3H-uH-deN">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="W">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="gOF-06-3S2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vln-wb-Sk7">
+                                                <rect key="frame" x="34" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="mfN-de-RKe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnc-Ja-jlf">
+                                                <rect key="frame" x="68" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="u9a-u7-KOt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GD1-6P-nv1">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="V">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="ea5-Se-VVB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIH-Ym-M2o">
+                                                <rect key="frame" x="136" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="cKq-PY-qe1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n34-Gg-7h5">
+                                                <rect key="frame" x="170" y="0.0" width="30" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="lettersTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="JFO-C1-7hk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srM-uN-Tqa">
+                                <rect key="frame" x="144.5" y="252" width="125" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="jVy-Sv-TWB"/>
+                                </constraints>
+                                <string key="text"> _____
+ |   |
+ |   O
+ |  /|\
+ |  / \ 
+_|_    </string>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME OVER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsr-cA-5Hu">
+                                <rect key="frame" x="64" y="268" width="286" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="FHp-Cn-izM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lZO-gQ-555">
+                                <rect key="frame" x="20" y="100" width="138" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOm-6K-nXA">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                        <color key="textColor" red="0.79814208080323901" green="0.81853671435151953" blue="0.83474085113118746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meilleur Score : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlR-xx-eju">
+                                        <rect key="frame" x="0.0" y="26.5" width="138" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" red="0.79814208080323901" green="0.81853671435151953" blue="0.83474085113118746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Background blue"/>
+                        <constraints>
+                            <constraint firstItem="srM-uN-Tqa" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="C7Z-98-dyg"/>
+                            <constraint firstItem="Qxn-Ho-6cx" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="33" id="DSM-5Z-o4E"/>
+                            <constraint firstItem="Ih9-9I-q5w" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="J3X-kJ-5Ek"/>
+                            <constraint firstItem="2p4-U0-qKf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="21" id="JfV-ww-Gz2"/>
+                            <constraint firstItem="lZO-gQ-555" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="56" id="LsU-Mq-wqK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2p4-U0-qKf" secondAttribute="trailing" constant="21" id="Q1M-qM-dC3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Kjr-st-SAm" secondAttribute="bottom" constant="32" id="RKq-w2-Dpl"/>
+                            <constraint firstItem="Lsr-cA-5Hu" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TBf-Lh-vTk"/>
+                            <constraint firstItem="Kjr-st-SAm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="c44-yS-NYc"/>
+                            <constraint firstItem="Lsr-cA-5Hu" firstAttribute="top" secondItem="srM-uN-Tqa" secondAttribute="bottom" constant="-140" id="dgX-7s-hXE"/>
+                            <constraint firstItem="Qxn-Ho-6cx" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="etb-ti-iyX"/>
+                            <constraint firstItem="lZO-gQ-555" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="nb0-bU-vS6"/>
+                            <constraint firstItem="2p4-U0-qKf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="qzM-kL-eAT"/>
+                            <constraint firstItem="Lsr-cA-5Hu" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-106" id="rV2-Dq-9WO"/>
+                            <constraint firstItem="Kjr-st-SAm" firstAttribute="top" secondItem="Ih9-9I-q5w" secondAttribute="bottom" constant="36" id="wWr-sD-Qum"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bestScoreLabel" destination="PlR-xx-eju" id="Bz2-pZ-Whx"/>
+                        <outlet property="drawingLabel" destination="srM-uN-Tqa" id="kKT-zO-cTl"/>
+                        <outlet property="gameOverLabel" destination="Lsr-cA-5Hu" id="4wZ-tf-LMV"/>
+                        <outlet property="scoreLabel" destination="fOm-6K-nXA" id="mn4-rd-FzD"/>
+                        <outlet property="wordLabel" destination="Qxn-Ho-6cx" id="EXb-EJ-jOR"/>
+                        <outletCollection property="lettersButton" destination="a4n-BE-sSR" collectionClass="NSMutableArray" id="5E7-17-9dD"/>
+                        <outletCollection property="lettersButton" destination="C9C-Oc-ngU" collectionClass="NSMutableArray" id="qND-8L-O1z"/>
+                        <outletCollection property="lettersButton" destination="UxL-tj-42R" collectionClass="NSMutableArray" id="xeC-GI-uTE"/>
+                        <outletCollection property="lettersButton" destination="S6Y-bj-6tz" collectionClass="NSMutableArray" id="a1r-qY-jgD"/>
+                        <outletCollection property="lettersButton" destination="HOT-rO-GJ1" collectionClass="NSMutableArray" id="UK8-Y3-rtS"/>
+                        <outletCollection property="lettersButton" destination="JCd-Ft-F46" collectionClass="NSMutableArray" id="DbU-Ut-RRE"/>
+                        <outletCollection property="lettersButton" destination="Km4-Pn-SNK" collectionClass="NSMutableArray" id="m7C-Iy-fQG"/>
+                        <outletCollection property="lettersButton" destination="exY-rk-oSZ" collectionClass="NSMutableArray" id="DBy-Qu-f00"/>
+                        <outletCollection property="lettersButton" destination="D1p-i4-uIx" collectionClass="NSMutableArray" id="vCh-eg-PYX"/>
+                        <outletCollection property="lettersButton" destination="LRP-c0-KBr" collectionClass="NSMutableArray" id="Tuu-yZ-911"/>
+                        <outletCollection property="lettersButton" destination="QAm-Qz-4vP" collectionClass="NSMutableArray" id="ZtS-98-Mnt"/>
+                        <outletCollection property="lettersButton" destination="xYI-fw-BIZ" collectionClass="NSMutableArray" id="ncq-5K-xrs"/>
+                        <outletCollection property="lettersButton" destination="Jjb-Qx-IAt" collectionClass="NSMutableArray" id="aqT-JB-jXD"/>
+                        <outletCollection property="lettersButton" destination="ZxA-6q-drL" collectionClass="NSMutableArray" id="Hnl-Yg-Bvl"/>
+                        <outletCollection property="lettersButton" destination="ObL-h7-Net" collectionClass="NSMutableArray" id="8Ao-6R-63J"/>
+                        <outletCollection property="lettersButton" destination="L9Z-H1-cki" collectionClass="NSMutableArray" id="hDC-Mi-1GO"/>
+                        <outletCollection property="lettersButton" destination="gHJ-7G-iDL" collectionClass="NSMutableArray" id="Cjy-bp-0v9"/>
+                        <outletCollection property="lettersButton" destination="aZ9-Ag-QBL" collectionClass="NSMutableArray" id="s8e-uV-WrM"/>
+                        <outletCollection property="lettersButton" destination="tiZ-gq-vYc" collectionClass="NSMutableArray" id="gTC-4k-MwY"/>
+                        <outletCollection property="lettersButton" destination="CV1-ra-l1L" collectionClass="NSMutableArray" id="KFt-Rq-MCt"/>
+                        <outletCollection property="lettersButton" destination="R3H-uH-deN" collectionClass="NSMutableArray" id="7s6-3O-0UT"/>
+                        <outletCollection property="lettersButton" destination="Vln-wb-Sk7" collectionClass="NSMutableArray" id="che-cY-J8L"/>
+                        <outletCollection property="lettersButton" destination="Cnc-Ja-jlf" collectionClass="NSMutableArray" id="ew1-N5-N48"/>
+                        <outletCollection property="lettersButton" destination="GD1-6P-nv1" collectionClass="NSMutableArray" id="cD9-XQ-r5O"/>
+                        <outletCollection property="lettersButton" destination="bIH-Ym-M2o" collectionClass="NSMutableArray" id="4S1-vh-RIE"/>
+                        <outletCollection property="lettersButton" destination="n34-Gg-7h5" collectionClass="NSMutableArray" id="yeC-QZ-w1o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="470.5" y="434"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Background blue">
+            <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Button gray">
+            <color red="0.74099999666213989" green="0.76499998569488525" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
